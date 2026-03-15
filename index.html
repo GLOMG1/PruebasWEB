@@ -5,12 +5,22 @@
     </head>
     <body>
         <script>
+            let contador = 0;
+
             function metodoNo(){
                 let boton = document.getElementById("btnNo")
-                let top = Math.random() * 100
-                let bot = Math.random() * 100
-                boton.style.top = top + "px"
-                boton.style.left = bot + "px"
+                let top = Math.random() * 300
+                let bot = Math.random() * 150
+                
+                if (Number.isInteger(contador/2)){
+                    boton.style.top = "-"+top + "px"
+                    boton.style.left = "-"+bot + "px"
+                }else{
+                    boton.style.top = top + "px"
+                    boton.style.left = bot + "px"
+                }
+                
+                contador ++ 
             }
 
             function metodoSi(){
@@ -20,21 +30,44 @@
         </script>
 
 
-        <div style="background:aqua; height: 97vh; align-items: center; justify-content: center; display: flex;">
+        <div style="background: linear-gradient(135deg, #ffd6e7, #f8c8dc); height: 97vh; align-items: center; justify-content: center; display: flex;">
             <table>
                 <tr>
-                    <td colspan="2" style="border-color: black; border: 1px solid black;">¿Quieres ser mi novia?</td>
+                    <td colspan="2" style="font-size: 7vw; padding-bottom: 50px;">¿Quieres ser mi novia?</td>
                 </tr>
                 <tr>
-                    <td>
-                        <button style="padding: 10px; margin: 15px;"
+                    <td style="text-align: center; vertical-align: middle;">
+                        <button style="
+                                padding: 14px 28px;
+                                margin: 12px;
+                                font-size: clamp(16px, 5vw, 22px);
+                                border: none;
+                                border-radius: 18px;
+                                background: linear-gradient(135deg, #ff7eb3, #ff4f8b);
+                                color: white;
+                                cursor: pointer;
+                                box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+                                transition: 0.25s ease;
+                                "
                                 onclick="metodoSi()"
                                 >Si
                                 
                         </button>
                     </td>
-                    <td>
-                        <button style="padding: 10px; margin: 15px; position: relative;"
+                    <td style="text-align: center; vertical-align: middle;">
+                        <button style="
+                                padding: 14px 28px;
+                                margin: 12px;
+                                font-size: clamp(16px, 5vw, 22px);
+                                border: none;
+                                border-radius: 18px;
+                                background: linear-gradient(135deg, #ff7eb3, #ff4f8b);
+                                color: white;
+                                cursor: pointer;
+                                box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+                                transition: 0.25s ease;
+                                position: relative;
+                                "
                                 id="btnNo"
                                 onmouseover="metodoNo()"
                                 onclick="metodoNo()">No
