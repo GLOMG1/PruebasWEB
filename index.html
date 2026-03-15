@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Mi sitio</title>
-</head>
-<body>
-  <h1>Hola DIANA de twice, voy a hacer un par de pruebas en esta nueva web</h1>
-</body>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function metodoNo(){
+                let boton = document.getElementById("btnNo")
+                let top = Math.random() * 100
+                let bot = Math.random() * 100
+                boton.style.top = top + "px"
+                boton.style.left = bot + "px"
+            }
+
+            function metodoSi(){
+                alert("Ya sabia Mandarina Diana")
+            }
+
+        </script>
+
+
+        <div style="background:aqua; height: 97vh; align-items: center; justify-content: center; display: flex;">
+            <table>
+                <tr>
+                    <td colspan="2" style="border-color: black; border: 1px solid black;">¿Quieres ser mi novia?</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button style="padding: 10px; margin: 15px;"
+                                onclick="metodoSi()"
+                                >Si
+                                
+                        </button>
+                    </td>
+                    <td>
+                        <button style="padding: 10px; margin: 15px; position: relative;"
+                                id="btnNo"
+                                onmouseover="metodoNo()"
+                                onclick="metodoNo()">No
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
 </html>
